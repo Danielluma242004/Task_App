@@ -55,9 +55,9 @@ export function TaskFormPage() {
       <form onSubmit={onSubmit}>
         <input
           type="text"
-          placeholder="title"
+          placeholder="Title"
           {...register("title", { required: true })}
-          className="bg-zinc-700 p-3 rounded-lg block w-full mb-3"
+          className="bg-slate-100 dark:bg-zinc-700 dark:text-white p-3 rounded-lg block w-full mb-3"
         />
         {errors.title && <span>This field is required</span>}
 
@@ -65,18 +65,18 @@ export function TaskFormPage() {
           rows="3"
           placeholder="Description"
           {...register("description", { required: true })}
-          className="bg-zinc-700 p-3 rounded-lg block w-full mb-3"
+          className="bg-slate-100 dark:bg-zinc-700 dark:text-white p-3 rounded-lg block w-full mb-3"
         ></textarea>
         {errors.description && <span>This field is required</span>}
 
-        <button className="bg-indigo-500 p-3 rounded-lg block w-full mt-3">
+        <button className="bg-indigo-500 p-3 rounded-lg block w-full mt-3 text-white">
           Save
         </button>
       </form>
       {params.id && (
         <div className="flex justify-end">
           <button
-            className="bg-red-500 p-3 rounded-lg w-48 mt-3"
+            className="bg-red-500 p-3 rounded-lg w-48 mt-3 text-white"
             onClick={async () => {
               const accepted = window.confirm("are you sure?");
               if (accepted) {
